@@ -154,7 +154,7 @@ Agora você pode testar seu serviço implantado.
 
 5.3. No painel __Dados de entrada para testar o ponto de extremidade__ , substitua o JSON do modelo pelos seguintes dados de entrada:
 
-'''
+'''json
    {
   "input_data": {
     "columns": [
@@ -181,11 +181,10 @@ Agora você pode testar seu serviço implantado.
 
 5.5. Revise os resultados do teste, que incluem um número previsto de aluguéis com base nos recursos de entrada - semelhante a este:
 
-'''
  [
    352.3564674945718
  ]
-'''
+
 
 O painel de teste pegou os dados de entrada e usou o modelo que você treinou para retornar o número previsto de aluguéis.
 
