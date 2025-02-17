@@ -191,7 +191,7 @@ O painel de teste pegou os dados de entrada e usou o modelo que você treinou pa
 
 Vamos rever o que você fez. Você usou um conjunto de dados históricos de aluguel de bicicletas para treinar um modelo. O modelo prevê o número de aluguéis de bicicletas esperados em um determinado dia, com base em características sazonais e meteorológicas;
 
-## 6 - Limpe
+## 6 - Limpar
 
 O serviço web que você criou está hospedado em uma Azure Container Instance . Se você não pretende experimentá-lo mais, você deve excluir o endpoint para evitar acumular uso desnecessário do Azure.
 
