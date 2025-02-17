@@ -7,7 +7,7 @@ Para isso voicê deverá executar o seguinte passo a passo no Azure Machine Lear
 ## 1 - Criar um espaço de trabalho do Azure Machine Learning
 Para usar o Azure Machine Learning, você precisa provisionar um workspace do Azure Machine Learning na sua assinatura do Azure. Então você poderá usar o Azure Machine Learning Studio para trabalhar com os recursos no seu workspace.
 
-Dica : se você já tiver um espaço de trabalho do Azure Machine Learning, poderá usá-lo e pular para a próxima tarefa.
+Dica!: se você já tiver um espaço de trabalho do Azure Machine Learning, poderá usá-lo e pular para a próxima tarefa.
 
   1.1. Entre no portal do Azure usando https://portal.azure.comsuas credenciais da Microsoft.
 
@@ -27,3 +27,10 @@ Dica : se você já tiver um espaço de trabalho do Azure Machine Learning, pode
 * No seu recurso de espaço de trabalho do Azure Machine Learning, selecione Iniciar estúdio (ou abra uma nova guia do navegador e navegue até https://ml.azure.com e entre no estúdio do Azure Machine Learning usando sua conta da Microsoft). Feche todas as mensagens exibidas.
 
 * No Azure Machine Learning Studio, você deve ver seu workspace recém-criado. Caso contrário, selecione All workspaces no menu à esquerda e, em seguida, selecione o workspace que você acabou de criar.
+
+## 2 - Utilize o Azure ML Automatizado para treinar o modelo
+
+O machine learning automatizado permite que você experimente vários algoritmos e parâmetros para treinar vários modelos e identificar o melhor para seus dados. Neste exercício, você usará um conjunto de dados de detalhes históricos de aluguel de bicicletas para treinar um modelo que prevê o número de aluguéis de bicicletas que devem ser esperados em um determinado dia, com base em características sazonais e meteorológicas.
+
+Citação!: Os dados usados ​​neste exercício são derivados do Capital Bikeshare e são usados ​​de acordo com o contrato de licença de dados publicado .
+
