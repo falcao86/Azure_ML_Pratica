@@ -1,6 +1,6 @@
 # Trabalhando com Machine Learning na Prática com Azure ML
 # Entendendo o Desafio
-Neste exercício, você usará o recurso de machine learning automatizado no Azure Machine Learning para treinar e avaliar um modelo de machine learning. Em seguida, você implantará e testará o modelo treinado. 
+Neste exercício, você usará o recurso de machine learning automatizado no Azure Machine Learning para treinar e avaliar um modelo de machine learning. Em seguida, você implantará e testará o modelo treinado. Como exemplo, será utilizado um conjunto de dados históricos de aluguel de bicicletas para treinar um modelo. O modelo irá prever o número de aluguéis de bicicletas esperados em um determinado dia, com base em características climáticas e ambientais.
 
 Para isso voicê deverá executar o seguinte passo a passo no Azure Machine Learning:
 
