@@ -32,5 +32,16 @@ Dica!: se você já tiver um espaço de trabalho do Azure Machine Learning, pode
 
 O machine learning automatizado permite que você experimente vários algoritmos e parâmetros para treinar vários modelos e identificar o melhor para seus dados. Neste exercício, você usará um conjunto de dados de detalhes históricos de aluguel de bicicletas para treinar um modelo que prevê o número de aluguéis de bicicletas que devem ser esperados em um determinado dia, com base em características sazonais e meteorológicas.
 
-Citação!: Os dados usados ​​neste exercício são derivados do Capital Bikeshare e são usados ​​de acordo com o contrato de licença de dados publicado .
+Citação!: Os dados usados ​​neste exercício são derivados do Capital Bikeshare e são usados ​​de acordo com o contrato de licença de dados publicado.
+
+2.1. No Azure Machine Learning Studio , visualize a página ML automatizado (em Criação ).
+
+2.2. Crie um novo trabalho de ML automatizado com as seguintes configurações, usando Avançar conforme necessário para avançar pela interface do usuário:
+
+* Configurações básicas:
+
+  * Nome do trabalho : O campo Nome do trabalho já deve estar preenchido previamente com um nome exclusivo. Mantenha-o como está.
+  * Novo nome do experimento :mslearn-bike-rental
+  * Descrição : Aprendizado de máquina automatizado para previsão de aluguel de bicicletas
+  * Tags : nenhuma
 
