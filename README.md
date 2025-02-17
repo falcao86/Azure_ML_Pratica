@@ -1,4 +1,4 @@
-# Desafio de Projeto 1: Trabalhando com Machine Learning na Prática com Azure ML
+# Trabalhando com Machine Learning na Prática com Azure ML
 # Entendendo o Desafio
 Neste exercício, você usará o recurso de machine learning automatizado no Azure Machine Learning para treinar e avaliar um modelo de machine learning. Em seguida, você implantará e testará o modelo treinado. 
 
