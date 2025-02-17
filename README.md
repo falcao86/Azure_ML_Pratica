@@ -115,4 +115,87 @@ Selecione __Criar__ . Após a criação do conjunto de dados, selecione o conjun
 
 2.4. Espere o trabalho terminar. Pode levar um tempo — agora pode ser uma boa hora para um coffee break!
 
+## 3 - Avalie o melhor modelo
 
+Quando o trabalho de aprendizado de máquina automatizado estiver concluído, você poderá revisar o melhor modelo treinado.
+
+3.1. Na guia __Visão geral__ do trabalho de aprendizado de máquina automatizado, observe o melhor resumo do modelo. Captura de tela do melhor resumo do modelo do trabalho de aprendizado de máquina automatizado com uma caixa ao redor do nome do algoritmo.
+
+3.2. Selecione o texto em __Nome do algoritmo__ para o melhor modelo para visualizar seus detalhes.
+
+3.3. Selecione a guia __Métricas__ e selecione os gráficos __residuais__ e __prediction_true__, caso ainda não estejam selecionados.
+
+Revise os gráficos que mostram o desempenho do modelo. O gráfico de __resíduos__ mostra os resíduos (as diferenças entre valores previstos e reais) como um histograma. O gráfico __predict_true__ compara os valores previstos com os valores verdadeiros.
+
+## 4 - Implante e teste o modelo
+
+4.1. Na guia Modelo para o melhor modelo treinado pelo seu trabalho de aprendizado de máquina automatizado, selecione Implantar e use a opção Ponto de extremidade em tempo real para implantar o modelo com as seguintes configurações:
+
+  * __Máquina virtual__ : Standard_DS3_v2
+  * __Contagem de instâncias__ : 3
+  * __Ponto final__ : Novo
+  * __Nome do ponto de extremidade__ : deixe o padrão ou certifique-se de que seja globalmente exclusivo
+  * __Nome da implantação__ : Deixe o padrão
+  * __Inferência de coleta de dados__ : Desativado
+  * __Modelo de pacote__ : Desativado
+
+__Observação__: se você receber uma mensagem de que não há cota suficiente para selecionar a máquina virtual Standard_DS3_v2 , selecione uma diferente.
+
+4.2. Aguarde o início da implantação - isso pode levar alguns segundos. O __status de Implantação__ para o endpoint __predict-rentals__ será indicado na parte principal da página como Running .
+4.3. Aguarde até que o __status Deploy__ mude para Succeeded . Isso pode levar de 5 a 10 minutos.
+
+## 5 - Teste o serviço implantado
+
+Agora você pode testar seu serviço implantado.
+
+5.1. No Azure Machine Learning Studio, no menu à esquerda, selecione __Endpoints__ e abra o endpoint em tempo real __predict-rentals__ .
+
+5.2. Na página do endpoint em tempo real do __predict-rentals , visualize a guia Teste__ .
+
+5.3. No painel __Dados de entrada para testar o ponto de extremidade__ , substitua o JSON do modelo pelos seguintes dados de entrada:
+
+   {
+  "input_data": {
+    "columns": [
+      "day",
+      "mnth",
+      "year",
+      "season",
+      "holiday",
+      "weekday",
+      "workingday",
+      "weathersit",
+      "temp",
+      "atemp",
+      "hum",
+      "windspeed"
+    ],
+    "index": [0],
+    "data": [[1,1,2022,2,0,1,1,2,0.3,0.3,0.3,0.3]]
+  }
+ }
+
+5.4. Clique no botão __Testar__ .
+
+5.5. Revise os resultados do teste, que incluem um número previsto de aluguéis com base nos recursos de entrada - semelhante a este:
+
+ [
+   352.3564674945718
+ ]
+
+O painel de teste pegou os dados de entrada e usou o modelo que você treinou para retornar o número previsto de aluguéis.
+
+Vamos rever o que você fez. Você usou um conjunto de dados históricos de aluguel de bicicletas para treinar um modelo. O modelo prevê o número de aluguéis de bicicletas esperados em um determinado dia, com base em características sazonais e meteorológicas;
+
+## 6 - Limpe
+
+O serviço web que você criou está hospedado em uma Azure Container Instance . Se você não pretende experimentá-lo mais, você deve excluir o endpoint para evitar acumular uso desnecessário do Azure.
+
+6.1. No Azure Machine Learning Studio , na guia __Endpoints__ , selecione o __endpoint predict-rentals__ . Em seguida, selecione __Delete e confirme__ que deseja excluir o endpoint.
+
+Excluir sua computação garante que sua assinatura não será cobrada por recursos de computação. No entanto, você será cobrado por um pequeno valor pelo armazenamento de dados, desde que o espaço de trabalho do Azure Machine Learning exista em sua assinatura. Se você tiver terminado de explorar o Azure Machine Learning, poderá excluir o espaço de trabalho do Azure Machine Learning e os recursos associados.
+
+Para excluir seu espaço de trabalho:
+
+No portal do Azure , na página __Grupos de recursos__ , abra o grupo de recursos que você especificou ao criar seu espaço de trabalho do Azure Machine Learning.
+Clique em __Excluir grupo de recursos__ , digite o nome do grupo de recursos para confirmar que deseja excluí-lo e selecione __Excluir__ .
